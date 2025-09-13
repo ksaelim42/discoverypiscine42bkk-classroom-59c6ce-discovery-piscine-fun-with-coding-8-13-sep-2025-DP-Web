@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Prueksakarn Meekhwan</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* ==========================
+       Global Layout
+    ========================== */
+    body {
+      padding-top: 70px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ==========================
+       Navbar
+    ========================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: linear-gradient(90deg, #c2185b, #f8bbd0); /* แดงชมพูเข้ม → พาสเทลชมพู */
+      color: #fff;
+    }
+
+    .navbar .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================
+       Sections
+    ========================== */
+    section  {
+  padding: 2rem;
+  max-width: 1700px;
+  margin: 2rem auto;
+  background-color: #f3e7ef;
+  border: 2px solid #ff2f92;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 47, 146, 0.4);
+}
+
+    /* ==========================
+       Section Headings
+    ========================== */
+    section h1 {
+      transition: transform 0.3s, color 0.3s;
+      cursor: default;
+    }
+
+    section h1:hover {
+      transform: scale(1.1);
+      color: #d32f2f; /* แดงเข้มขึ้นเวลา hover */
+    }
+
+    /* ==========================
+       Links
+    ========================== */
+    a {
+      color: #b71c1c;
+      text-decoration: none;
+      transition: color 0.3s, text-decoration 0.3s;
+    }
+
+    a:hover {
+      color: #d32f2f;
+      text-decoration: underline;
+    }
+
+    /* ==========================
+       Showcase Cards
+    ========================== */
+    .showcase-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      border-radius: 15px;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ==========================
+       About Me Image
+    ========================== */
+    #about img {
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    #about img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark">
+   <div class="container">
+     <a class="navbar-brand" href="#">Pmeekhwa</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav ms-auto">
+         <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+         <li class="nav-item"><a class="nav-link" href="#showcase">Showcase</a></li>
+         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+
+ <!-- About Me Section -->
+ <section id="about" class="text-center">
+   <div class="container">
+     <h1 class="mb-4">About Me</h1>
+     <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+       <img src="1234.jpg" alt="Your Photo" class="me-md-4 mb-3 mb-md-0" width="300" height="400">
+       <div class="text-start">
+         <p><strong>Name:</strong> Prueksakarn Meekhwan</p>
+         <p><strong>Weight:</strong> 45.6 kg</p>
+         <p><strong>Height:</strong> 155 cm</p>
+         <p><strong>Age:</strong> 21</p>
+         <p><strong>Education:</strong> King Mongkut's Institute of Technology Ladkrabang</p>
+         <p><strong>Hobby:</strong> Watch series, Playing with the cat, Go take photos at a cafe on a holiday</p>
+         <p><strong>Interest:</strong> Investment</p>
+         <p><strong>Favorite food:</strong> Noodles, Sandwich</p>
+         <p><strong>Pet:</strong> Cat</p>
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <!-- Showcase Section -->
+<section id="showcase" class="text-center">
+  <div class="container">
+    <h1 class="mb-4">Showcase</h1>
+    <p class="mb-5">Programming skills.</p>
+    <div class="row g-4">
+
+      <!-- Web Application Card (เดิม JavaScript) -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow showcase-card">
+          <img src="BONANA_-_30.webp" class="card-img-top" alt="Web Application Project">
+          <div class="card-body">
+            <h5 class="card-title">Web Application</h5>
+            <p class="card-text">Create a backend website for Bonnana store.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Business Analyst Card (เดิม SPSS) -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow showcase-card">
+          <img src="IMG_1171.webp" class="card-img-top" alt="Business Analyst Project">
+          <div class="card-body">
+            <h5 class="card-title">Project Business Analyst</h5>
+            <p class="card-text">Create a prototype from data analysis.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Power BI Card (คงเดิม) -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow showcase-card">
+          <img src="jpg.webp" class="card-img-top" alt="Power BI Project">
+          <div class="card-body">
+            <h5 class="card-title">Power BI</h5>
+            <p class="card-text">Interactive dashboards and reports built with Power BI.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ <!-- Contact Section -->
+ <section id="contact" class="text-center">
+   <div class="container">
+     <h1 class="mb-4">Contact</h1>
+     <p><strong>Facebook:</strong> <a href="https://www.facebook.com/prueksakarn.meekhwan" target="_blank">Prueksakarn Meekhwan</a></p>
+     <p><strong>Instagram:</strong> <a href="https://www.instagram.com/real.prueksakarn" target="_blank">@real.prueksakarn</a></p>
+     <p><strong>Tel:</strong> 062-835-4852</p>
+   </div>
+ </section>
+
+ <!-- Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

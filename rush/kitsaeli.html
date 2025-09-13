@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="mark.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="brand"><h2>kitsaeli</h2></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#showcase">Showcase</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1>Hi, I'm Mark 👋</h1>
+      <p>42Bangkok | Food Process Engineering | Enjoy Eating</p>
+    </div>
+    <div class="hero-photo">
+      <img src="mark.jpg" alt="My Photo">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="text">
+    <h1>About Me</h1>
+    <p><strong>Name:</strong> Kittinon</p>
+    <p><strong>Education:</strong> King Mongkut's Institute of Technology Ladkrabang</p>
+    <p><strong>Hobby:</strong> Watch Movie, Playing Basketball, Go take the park on a holiday</p>
+    <p><strong>Interest:</strong> Coding & Food Technology</p>
+    <p><strong>Favorite food:</strong> Thai food</p>
+    <p><strong>Pet:</strong> Dog</p>
+  </div>
+</section>
+
+<section id="showcase" class="showcase">
+  <h1>Showcase</h1>
+  <div class="container">
+    <div class="card">
+      <img src="cert1.webp" alt="Project 1">
+      <div class="info">
+        <h2>Project 1</h2>
+        <p><span>AI-powered </span> food safety dashboard.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="cert2.webp" alt="Project 2">
+      <div class="info">
+        <h2>Project 2</h2>
+        <p><span>AI-powered </span> food safety dashboard.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="cert3.jpg" alt="Project 3">
+      <div class="info">
+        <h2>Project 3</h2>
+        <p><span>AI-powered </span> food safety dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p>Let's connect on social platforms:</p>
+  <a href="https://linkedin.com" class="btn btn-primary">LinkedIn</a>
+  <a href="https://github.com" class="btn btn-dark">GitHub</a>
+  <a href="mailto:your@email.com" class="btn btn-success">Email</a>
+</section>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 80;
+    if (pageYOffset >= top && pageYOffset < top + sec.clientHeight) current = sec.id;
+  });
+  navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === "#" + current));
+});
+</script>
+
+</body>
+</html>
